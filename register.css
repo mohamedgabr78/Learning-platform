@@ -1,0 +1,33 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+form {
+  padding: 10px 60px;
+  background-color: bisque;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 7px black;
+}
+
+.textfield {
+  padding-bottom: 10px;
+}
+
+small {
+  color: #e74c3c;
+  display: block;
+}
+.fa.fa-exclamation-circle {
+  color: #e74c3c;
+  margin-left: -20px;
+  margin-top: 7px;
+  display: none;
+}
+input {
+  display: inline-block;
+}

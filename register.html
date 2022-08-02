@@ -19,13 +19,13 @@
   </head>
   <body>
     <div class="formcontainer">
-      <h1>Weekly Kitten Pictures Subsription</h1>
+      <h1>Sign Up</h1>
       <hr />
       <form
         id="form"
         name="validateForm"
-        action="login.php"
-        method="post"
+        action="./backend/signup.php"
+        method="POST"
         onsubmit="return validate(event)"
       >
         <div class="textfield">
@@ -72,18 +72,6 @@
             <i class="fa fa-exclamation-circle" id="pass2_error_icon"></i>
             <small id="pass2_error"></small>
           </div>
-        </div>
-
-        <div class="checkbox">
-          <input
-            type="checkbox"
-            name="newsletter"
-            id="newsletter"
-            onchange="handelCheckbox(event)"
-          />
-          <label for="newsletter"
-            >I agree to receive Weekly Kitten Pictures newsletters</label
-          >
         </div>
 
         <div class="checkbox">

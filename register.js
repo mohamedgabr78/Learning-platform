@@ -89,8 +89,16 @@ function validatePassword(password) {
   return re.test(password);
 }
 
-const handelCheckbox = (e) => {
-  if (e.target.checked) {
-    alert("There is a possible spam by setting this field");
+let xhr = new XMLHttpRequest();
+xhr.open("POST", "backend/signup.php", true);
+xhr.onload = () => {};
+xhr.onload = () => {
+  if (xhr.readyState === XMLHttpRequest.DONE) {
+    if (xhr.status === 200) {
+      let data = xhr.response;
+    }
   }
 };
+
+let formData = new FormData(form);
+xhr.send(formData);

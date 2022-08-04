@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Mohamed_Gabr" />
+  <link rel="stylesheet" href="card.css">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
@@ -18,15 +19,20 @@
 
 <body>
   <?php include './header.php' ?>
-  <main>
+  <main class="home">
+    <h1>Welcome! to My Courses!</h1>
     <form>
       <input type="text" placeholder="What do you want to learn?" />
       <button type="submit">
         <i class="fa fa-search"></i>
       </button>
     </form>
+
+    <div class="cards">
+
+      <?php include './card.php' ?>
+    </div>
   </main>
-  <a href="./register.html">sign up</a>
   <?php include './footer.php' ?>
 </body>
 

@@ -11,14 +11,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
   <script defer src="index.js"></script>
-  <script defer src="header.js"></script>
-  <script defer src="footer.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
   <title>My Courses</title>
 </head>
 
 <body>
-  <?php include './header.php' ?>
+  <?php include './template/header.php' ?>
   <main class="home">
     <h1>Welcome! to My Courses!</h1>
     <form>
@@ -29,11 +27,12 @@
     </form>
 
     <div class="cards">
-
       <?php include './card.php' ?>
     </div>
+    </div>
+    </div>
   </main>
-  <?php include './footer.php' ?>
+  <?php include './template/footer.php' ?>
 </body>
 
 </html>

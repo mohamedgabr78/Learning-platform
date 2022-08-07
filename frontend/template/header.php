@@ -1,7 +1,7 @@
 <nav>
     <picture>
-        <source media="(max-width:720px)" srcset="./logo_mobile.png" />
-        <img class="logo" src="./logo_desktop.png" alt="logo" />
+        <source media="(max-width:720px)" srcset="/frontend/image/logo_mobile.png" />
+        <img class="logo" src="/frontend/image/logo_desktop.png" alt="logo" />
     </picture>
 
     <div class="profile">

@@ -9,6 +9,7 @@ if (!empty($name) && !empty($email) && !empty($password)) {
     if (mysqli_num_rows($sql) > 0) {
         echo "$email : is already exist";
     } else {
+        echo "$email : is not exist";
         $sql = mysqli_query($conn, "INSERT INTO users (name,email,password) VALUES('{$name}', '{$email}','{$password}')");
     }
 }

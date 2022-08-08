@@ -31,6 +31,7 @@ nav img.logo {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  padding-right: 8vw;
 }
 
 .circle {
@@ -56,6 +57,13 @@ span.user {
   font-size: 13px;
   font-weight: bold;
   display: none;
+}
+
+span.welcome {
+  width: 50%;
+
+  font-size: 13px;
+  font-weight: bold;
 }
 
 .cart-icon {
@@ -140,4 +148,13 @@ body {
   nav {
     margin-bottom: 3rem;
   }
+}
+
+#footer {
+  position: absolute;
+  bottom: 0px;
+  background-color: var(--secondary-color);
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
 }

@@ -1,21 +1,31 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  font-weight: bold;
-  font-family: sans-serif;
+.formcontainer {
+  padding-top: 5vh;
+}
+
+.formcontainer h1 {
+  text-align: center;
+  color: white;
+  text-decoration: underline;
 }
 
 form {
-  padding: 10px 60px;
-  background-color: bisque;
-  border-radius: 5px;
-  box-shadow: 0 0 20px 7px black;
+  width: 68%;
+  padding: 10px 60px 30px 60px;
+  background-color: var(--primary-color);
+  border-radius: 1.5rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .textfield {
   padding-bottom: 10px;
+}
+.textfield label {
+  color: white;
 }
 
 small {
@@ -30,4 +40,59 @@ small {
 }
 input {
   display: inline-block;
+  border: none;
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+button {
+  margin: 20px auto;
+  width: max-content;
+  background-color: var(--secondary-color);
+
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-weight: 400;
+  text-align: center;
+
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.5rem !important;
+}
+
+form a {
+  text-decoration: none !important;
+  color: white !important;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+form a span {
+  text-decoration: underline;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.checkbox label {
+  margin-left: 6px;
+}
+
+.alert-toast {
+  position: absolute;
+  top: 12vh;
+  z-index: 1;
+  width: 100%;
+  background-color: #e74c3c;
+  text-align: center;
+  color: white;
+  display: none;
+  padding-bottom: 3px;
 }

@@ -42,6 +42,21 @@
   color: var(--secondary-color);
 }
 
+.home .card-content div:after {
+  content: "$";
+}
+
+.home .card-content a {
+  color: white !important;
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  text-align: center;
+}
+
 @media only screen and (min-width: 720px) {
   .home .course-card {
     width: 80%;
@@ -50,10 +65,23 @@
     justify-content: flex-start;
     align-items: center;
     height: 350px;
+    background-color: black;
   }
 
   .home .course-card img {
+    max-width: 50%;
     width: auto;
     height: 100%;
+  }
+  .home .card-content {
+    height: 100%;
+    background-color: #dde4e8df;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .home .card-content a {
+    width: 100%;
   }
 }

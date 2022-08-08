@@ -9,13 +9,13 @@
   <link rel="stylesheet" href="card.css">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
 
   <script defer src="index.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
   <title>My Courses</title>
 </head>
 
-<body>
+<body id="home">
   <?php include './template/header.php' ?>
   <main class="home">
     <h1>Welcome! to My Courses!</h1>
@@ -34,5 +34,7 @@
   </main>
   <?php include './template/footer.php' ?>
 </body>
+
+<?php include './template/footer.php' ?>
 
 </html>

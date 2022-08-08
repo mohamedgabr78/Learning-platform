@@ -7,8 +7,6 @@ $query = mysqli_query($conn, $sql);
 
 $data = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
-
-
 foreach ($data as $course) {
     $img = $course["course_img"];
     $img = base64_encode($img);
@@ -19,6 +17,7 @@ foreach ($data as $course) {
         <h5>{$course['course_name']}</h5>
         <p>{$course['course_desc']}</p>
         <div>{$course['course_price']}</div>
+        <a href='course.php?course_id={$course['course_id']}'>More details</a>
     </div>
 </div>";
 }

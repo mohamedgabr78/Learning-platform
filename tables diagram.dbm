@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+         Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel pgmodeler-ver="0.9.1" last-position="0,0" last-zoom="1"
+	 default-schema="public" default-owner="postgres">
+<database name="new_database" is-template="false" allow-conns="true">
+</database>
+
+<schema name="public" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<table name="users">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="209" y="106"/>
+	<column name="user_id" not-null="true" default-value="increment">
+		<type name="int4" length="0"/>
+	</column>
+	<column name="user_name" not-null="true">
+		<type name="varchar" length="25"/>
+	</column>
+	<column name="user_email" not-null="true">
+		<type name="varchar" length="30"/>
+	</column>
+	<column name="user_pass" not-null="true">
+		<type name="varchar" length="20"/>
+	</column>
+	<constraint name="users_pk" type="pk-constr" table="public.users">
+		<columns names="user_id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="courses">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="1157" y="109"/>
+	<column name="course_id" not-null="true">
+		<type name="int4" length="0"/>
+	</column>
+	<column name="course_name" not-null="true">
+		<type name="varchar" length="60"/>
+	</column>
+	<column name="course_desc" not-null="true">
+		<type name="varchar" length="100"/>
+	</column>
+	<column name="course_content" not-null="true">
+		<type name="text" length="0"/>
+	</column>
+	<constraint name="courses_pk" type="pk-constr" table="public.courses">
+		<columns names="course_id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="cart">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="698" y="367"/>
+</table>
+
+<relationship name="user has one cart" type="rel11"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#83af1f"
+	 src-table="public.users"
+	 dst-table="public.cart"
+	 src-required="false" dst-required="false">
+	<label ref-type="name-label">
+		<position x="0" y="0"/>
+	</label>
+</relationship>
+
+<relationship name="cart has many courses" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#83af1f"
+	 src-table="public.courses"
+	 dst-table="public.cart"
+	 src-required="false" dst-required="false">
+	<label ref-type="src-label">
+		<position x="-109.732" y="273.725"/>
+	</label>
+	<label ref-type="dst-label">
+		<position x="108.159" y="-272.275"/>
+	</label>
+	<label ref-type="name-label">
+		<position x="25.4581" y="-1.51066"/>
+	</label>
+</relationship>
+
+</dbmodel>

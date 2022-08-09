@@ -19,9 +19,9 @@
   <?php include './template/header.php' ?>
   <main class="home">
     <h1>Welcome! to My Courses!</h1>
-    <form>
-      <input type="text" placeholder="What do you want to learn?" />
-      <button type="submit">
+    <form method="GET">
+      <input type="text" placeholder="What do you want to learn?" name="search" />
+      <button type="search">
         <i class="fa fa-search"></i>
       </button>
     </form>

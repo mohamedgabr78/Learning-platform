@@ -66,6 +66,14 @@
       </button>
 
     </form>
+    <!-- <?php
+          // if (isset($_SESSION['errors'])) {
+          //   foreach ($_SESSION['errors'] as $error) {
+          //     echo $error;
+          //   }
+          // }
+          // unset($_SESSION['errors']);
+          ?> -->
   </div>
 
   <?php include './template/footer.php' ?>

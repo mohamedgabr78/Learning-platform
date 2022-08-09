@@ -31,7 +31,7 @@
 
     foreach ($data as $course) {
 
-        if ("course_id=" . $course['course_id'] == $selected_course_id) {
+        if ($course['course_id'] == $selected_course_id) {
             $img = $course["course_img"];
             $img = base64_encode($img);
             echo

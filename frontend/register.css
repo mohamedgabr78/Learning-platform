@@ -96,3 +96,14 @@ form a span {
   display: none;
   padding-bottom: 3px;
 }
+.wrong_password {
+  position: absolute;
+  top: 12vh;
+  z-index: 1;
+  width: 100%;
+  background-color: #e74c3c;
+  text-align: center;
+  color: white;
+
+  padding-bottom: 3px;
+}

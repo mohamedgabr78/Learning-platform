@@ -47,7 +47,6 @@ xhr.send(formData);
 function showMessage() {
   const urlParams = new URLSearchParams(location.search);
   const params = Object.fromEntries(urlParams);
-  // console.log(params);
   if (params.email_exists)
     document.getElementsByClassName("alert-toast")[0].style.display = "block";
 }

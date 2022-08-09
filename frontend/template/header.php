@@ -1,3 +1,7 @@
+<?php
+include_once '../backend/config.php';
+?>
+
 <nav>
     <a href="home.php">
 
@@ -9,15 +13,23 @@
 
     <div class="profile">
 
+        <?php
+        if (loggedIn()) {
+            echo "<span class='user'>Welcome {$_SESSION['user']['user_name']}</span>
 
-        <a href="login.php"><span class="welcome">Login</span></a>
-        <!-- <span class="user">My name</span>
-        <div class="circle avatar">
-            <img alt="profile-img" src="https://www.nicepng.com/png/detail/799-7998295_profile-placeholder-woman-720-profile-photo-placeholder-png.png" />
+        <div class='circle avatar'>
+            <img alt='profile-img' src='https://www.nicepng.com/png/detail/799-7998295_profile-placeholder-woman-720-profile-photo-placeholder-png.png' />
         </div>
-
-        <div class="circle">
-            <i class="fa fa-cart-arrow-down cart-icon" aria-hidden="true"></i>
+        <a href='../backend/logout.php'>logOut</a>
+        <i class='fa fa-sign-out' aria-hidden='true'></i>
+        ";
+        } else echo "<a href='login.php'><span class='welcome'>Login</span></a>
+        <i class='fa fa-sign-out' aria-hidden='true'></i>
+        ";
+        ?>
+        <div>
         </div>
     </div>
+</nav>
+</div>
 </nav>

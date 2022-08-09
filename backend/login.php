@@ -1,14 +1,8 @@
 <?php
 include_once './config.php';
+
 $email = mysqli_real_escape_string($conn, $_POST['email']);
 $password = mysqli_real_escape_string($conn, $_POST['password']);
-// $password = password_hash(
-//     mysqli_real_escape_string($conn, $_POST['password']),
-//     PASSWORD_DEFAULT
-// );
-// $verify = password_verify($password, $user['password']);
-
-$messages = array();
 
 if (isset($email) && isset($password)) {
     $sql = "SELECT * FROM users WHERE email = '{$email}'";
@@ -17,11 +11,11 @@ if (isset($email) && isset($password)) {
     if (mysqli_num_rows($query) > 0) {
         foreach ($data as $user) {
             if ($password == $user['password']) {
-                session_start();
                 header('Location:/frontend/home.php');
-                $_SESSION['user'][] = $user;
+                $_SESSION['user'] = $user;
             } else {
-                array_push($messages, "Your password is wrong");
+                $_SESSION['errors'] = array("<div class='wrong_password'>You entered an incorrect password</div>");
+                header('Location:/frontend/login.php?');
             }
         }
     }

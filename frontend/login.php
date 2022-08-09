@@ -1,3 +1,9 @@
+<?php
+include_once '../backend/config.php';
+if (loggedIn()) {
+  header("location:home.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +22,7 @@
 <body onload="showMessage()">
   <?php include './template/header.php' ?>
 
-  <div class="formcontainer">
+  <div class=" formcontainer">
 
 
     <form id="form" name="validateForm" action="../backend/login.php" method="POST">
@@ -38,10 +44,18 @@
       </div>
       <button type="submit">Login</button>
 
-      <a href="register.php">You don`t have an account? <span>Signup now!</span>
+      <a href="register.php">Don`t have an account? <span>Signup now!</span>
       </a>
     </form>
-    <div class="alert-toast">Email already exists!</div>
+    <div class="alert-toast">This Email is already exists!</div>
+    <?php
+    if (isset($_SESSION['errors'])) {
+      foreach ($_SESSION['errors'] as $error) {
+        echo $error;
+      }
+      unset($_SESSION['errors']);
+    }
+    ?>
   </div>
   <?php include './template/footer.php' ?>
 </body>

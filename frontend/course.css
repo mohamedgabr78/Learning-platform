@@ -25,7 +25,7 @@ body {
 .course-page {
   width: 100%;
   overflow: auto;
-  height: 88vh;
+  height: 80vh;
 }
 
 .course-page img {

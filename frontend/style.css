@@ -33,6 +33,14 @@ nav img.logo {
   align-items: center;
   padding-right: 8vw;
 }
+.profile i {
+  color: var(--secondary-color);
+  margin-left: 1px;
+}
+.profile a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
 
 .circle {
   height: 2rem;
@@ -52,11 +60,12 @@ nav img.logo {
 }
 
 span.user {
-  width: 50%;
+  width: 40%;
   margin: 0 auto;
   font-size: 13px;
   font-weight: bold;
   display: none;
+  color: var(--secondary-color);
 }
 
 span.welcome {
@@ -147,6 +156,11 @@ body {
   }
   nav {
     margin-bottom: 3rem;
+  }
+  .profile a {
+    text-decoration: none;
+    color: var(--primary-color);
+    right: 10vw;
   }
 }
 

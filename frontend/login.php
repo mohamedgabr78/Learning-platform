@@ -1,5 +1,7 @@
+<!-- login page which ask user for email and password  -->
 <?php
 include_once '../backend/config.php';
+// check if the user login or not.
 if (loggedIn()) {
   header("location:home.php");
 }
@@ -12,19 +14,19 @@ if (loggedIn()) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="register.css" />
   <link rel="stylesheet" href="style.css" />
-
   <script src="login.js" defer></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <title>Login</title>
 </head>
 
+<!-- disable message which contains the email validation error
+with body mount -->
+
 <body onload="showMessage()">
   <?php include './template/header.php' ?>
 
   <div class=" formcontainer">
-
-
     <form id="form" name="validateForm" action="../backend/login.php" method="POST">
       <h1>Login</h1>
       <div class="textfield">
@@ -49,10 +51,13 @@ if (loggedIn()) {
     </form>
     <div class="alert-toast">This Email is already exists!</div>
     <?php
+
+    //check if there is any error in session array
     if (isset($_SESSION['errors'])) {
       foreach ($_SESSION['errors'] as $error) {
         echo $error;
       }
+      // set the error array empty again
       unset($_SESSION['errors']);
     }
     ?>

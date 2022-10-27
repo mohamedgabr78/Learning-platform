@@ -1,4 +1,7 @@
+// method to validate the sign up form.
 function validate(e) {
+
+  //create two objects to hold the values of inputs and the error messages.
   const errors = {};
   const values = {};
   for (let i = 0; i <= [...e.target.elements].length; i++) {
@@ -78,17 +81,19 @@ function showError(inputID, error) {
   }
   document.getElementById(inputID + "_error_icon").style.display = "none";
 }
-
+// check email validation by regex.
 function validateEmail(email) {
   var re = /\S+@\S+\.\S+/;
   return re.test(email);
 }
 
+// check password validation by regex.
 function validatePassword(password) {
   var re = /^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]*$/;
   return re.test(password);
 }
 
+//xml request usin Ajax to send the form to the backend.
 let xhr = new XMLHttpRequest();
 xhr.open("POST", "backend/signup.php", true);
 xhr.onload = () => {

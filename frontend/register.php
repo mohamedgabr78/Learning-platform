@@ -15,9 +15,8 @@
 <body>
   <?php include './template/header.php' ?>
 
+  <!-- sign up form -->
   <div class="formcontainer">
-
-
     <form id="form" name="validateForm" action="../backend/signup.php" method="POST" onsubmit="return validate(event)">
       <h1>Sign Up</h1>
       <div class="textfield">
@@ -66,14 +65,6 @@
       </button>
 
     </form>
-    <!-- <?php
-          // if (isset($_SESSION['errors'])) {
-          //   foreach ($_SESSION['errors'] as $error) {
-          //     echo $error;
-          //   }
-          // }
-          // unset($_SESSION['errors']);
-          ?> -->
   </div>
 
   <?php include './template/footer.php' ?>

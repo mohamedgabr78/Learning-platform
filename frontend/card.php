@@ -1,6 +1,7 @@
 <?php
 include_once '../backend/config.php';
 
+//check if there is a value in search bar.
 if (isset($_GET['search'])) {
 
     $search = mysqli_real_escape_string($conn, $_GET['search']);
@@ -12,6 +13,8 @@ $query = mysqli_query($conn, $sql);
 
 $data = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
+// check if there is no value in search bar.
+// get all courses from courses table.
 if (!isset($search) || $search == '') {
     foreach ($data as $course) {
         $img = $course["course_img"];
@@ -27,6 +30,9 @@ if (!isset($search) || $search == '') {
     </div>
 </div>";
     }
+
+    //if there is a search value, get the courses from course's table where 
+    // name of the courses begin with the search letters. 
 } else {
     $sql = "SELECT course_id,course_name,course_desc,course_content,course_img,course_price FROM courses WHERE course_name LIKE '$search%' ";
     $query = mysqli_query($conn, $sql);

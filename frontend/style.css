@@ -172,3 +172,22 @@ body {
   text-align: center;
   margin-top: 5px;
 }
+#footer {
+  position: absolute;
+  bottom: 0px;
+  background-color: red;
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.user-course {
+  width: 200px;
+  height: 20px;
+  margin: 20px;
+}
+.user-course img {
+  width: 200px;
+  height: 20px;
+  margin: 20px;
+}

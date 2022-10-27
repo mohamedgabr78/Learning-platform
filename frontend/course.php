@@ -18,19 +18,15 @@
 
     <?php
     include_once '../backend/config.php';
-
     $sql = 'SELECT course_id,course_name,course_desc,course_content,course_img,course_price FROM courses';
-
     $query = mysqli_query($conn, $sql);
-
     $data = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
-
+    //the the params from url to determine the course id.
     $selected_course_id = $_SERVER['QUERY_STRING'];
 
 
     foreach ($data as $course) {
-
         if ($course['course_id'] == $selected_course_id) {
             $img = $course["course_img"];
             $img = base64_encode($img);
@@ -46,8 +42,20 @@
 
                     <h3>Content</h3>
                     <p>{$course['course_content']}</p>
-                    <div>{$course['course_price']}</div>
-                    <button name='add'>Buy it now</button>
+
+                ";
+            if (!isRegisterd($course['course_id'])) {
+    ?>
+                <div class='course-price'> <?= $course['course_price'] ?></div>
+                <form action="../backend/addCourse.php" method="POST">
+                    <input type="submit" value="Buy it now" name="add_btn" class="add-course">
+                    <input type="hidden" name="course_id" value="<?= $course['course_id'] ?>">
+                </form>
+    <?php
+            } else {
+                echo "<div>asdasdasd</div>";
+            }
+            echo " 
                 </div>
             </div>";
         }

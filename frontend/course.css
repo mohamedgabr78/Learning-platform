@@ -68,7 +68,7 @@ p::after {
   content: "$";
 }
 
-button {
+.add-course {
   margin: 20px auto;
   width: max-content;
   background-color: var(--secondary-color);

@@ -42,7 +42,7 @@
   color: var(--secondary-color);
 }
 
-.home .card-content div:after {
+.home .card-content .course-price :after {
   content: "$";
 }
 
